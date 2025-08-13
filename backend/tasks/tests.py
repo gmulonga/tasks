@@ -71,7 +71,7 @@ class TaskAPITest(APITestCase):
             'description': 'Updated Description',
             'is_completed': True
         }
-        response = self.client.patch(url, data, format='json')  # PATCH for partial update
+        response = self.client.patch(url, data, format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.task1.refresh_from_db()
         self.assertEqual(self.task1.title, 'Updated Task')
