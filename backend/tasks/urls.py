@@ -8,7 +8,7 @@ from .views import (
 )
 
 urlpatterns = [
-    path('', task_list, name='task_list'),
+    path('all/', task_list, name='task_list'),
     path('<int:id>/', task_detail, name='task_detail'),
     path('create/', task_create, name='task_create'),
     path('<int:id>/update/', task_update, name='task_update'),
